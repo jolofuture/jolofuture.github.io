@@ -2,10 +2,139 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Zukunft startet jetzt</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hallo</h1>
-  <p style="color: red;">hallo Blog</p>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#ueber">ÜBER</a>
+            <a href="#diy">SELBERMACHEN</a>
+            <a href="#handwerk">HANDWERK</a>
+            <a href="#feiertage">FEIERTAGE</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Article 1 -->
+            <article class="article">
+                <div class="article-category">BASTELN, DIY, FEIERTAGE</div>
+                <h2 class="article-title">Selbstgemachter Flammkuchen richtig schnell</h2>
+                <div class="article-meta">Veröffentlicht von Joséphine am 22. Oktober 2025</div>
+                <img src="images/flammkuchen.jpg" alt="Kekse backen" class="article-image">
+                <a href="flammkuchen.html" class="continue-reading">Weiterlesen →</a>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article">
+                <div class="article-category">DEKORATION, HALLOWEEN</div>
+                <h2 class="article-title">Halloween-Dekorationsideen für Ihre Veranda</h2>
+                <div class="article-meta">Veröffentlicht von Joséphine am 22. Oktober 2025</div>
+                <img src="images/article-2.jpg" alt="Halloween-Dekoration" class="article-image">
+                <a href="halloween.html" class="continue-reading">Weiterlesen →</a>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article">
+                <div class="article-category">PARTY, TIPPS</div>
+                <h2 class="article-title">Meine Tipps für eine einfache Geburtstagsfeier</h2>
+                <div class="article-meta">Veröffentlicht von Joséphine am 22. Oktober 2025</div>
+                <img src="images/article-3.jpg" alt="Geburtstagsfeier" class="article-image">
+                <a href="geburtstag.html" class="continue-reading">Weiterlesen →</a>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Profile Section -->
+            <div class="profile">
+                <img src="images/profile.jpg" alt="Joséphine" class="profile-image">
+                <h2>Hallo!<br>Ich bin Joséphine</h2>
+                <p>Hallo zusammen ich starte einen eigenen Blog für den Hof 3(Der Blog kann nur unser Hof sehen)
+
+                  In diesem Teil erkläre ich euch, um was es darin geht und wie das funktioniert!
+                 
+                 Ich mache Interviews und Artikel für euch.Ich schreibe Witze und gebe euch gute Lieder Tipps. Vielleicht kann ich noch eine Chat-Funktion einrichten. Ich gebe gute Basteltipps und mal Tipps, wenn ihr gute andere Ideen habt, dann kommt einfach auf mich zu. wenn ich die Chat-Funktion eingerichtet hab dann wünsche ich mir keine fiesen   Kommentare. Manchmal kann es sein, dass ich nur für die Kinder einen Artikel mache oder auch nur für die Erwachsenen oder Jugendlichen, ich schreibe dann für wer das ist. es kann ein Weilchen dauern bis der nächste Artikel rein kommt. ich mache auch viele umfragen.genießt es und entspannt euch.  viele grüße Josephine 
+                 
+                 PS ich freue mich darauf Hi
+                 
+                   PPS ich gebe euch auch Kochtipps
+                 </p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="sidebar-section">
+                <h3>Lasse uns vernetzen</h3>
+                <div class="social-links">
+                    <a href="#">Mail</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter">
+                <h3>Mache mit!</h3>
+                <p>Und schreibe mir ein Mail wenn du eine Idee für einen Artikel hast oder komm persönlich auf mich zu</p>
+                <div><a href="#" id="email-link" style="color: white; text-decoration: none;">→ E-Mail schreiben</a></div>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar-section">
+                <h3>Aktuelle Beiträge</h3>
+                <div class="recent-posts">
+                    <div class="recent-post">
+                        <img src="images/recent-1.jpg" alt="Selbstgemachte Geschenke">
+                        <h4>Selbstgemachte Geschenke für jeden Anlass</h4>
+                    </div>
+                    <div class="recent-post">
+                        <img src="images/recent-2.jpg" alt="Halloween-Dekoration">
+                        <h4>Halloween-Dekorationsideen für Ihre Veranda</h4>
+                    </div>
+                    <div class="recent-post">
+                        <img src="images/recent-3.jpg" alt="Geburtstagsfeier">
+                        <h4>Meine Tipps für eine einfache Geburtstagsfeier</h4>
+                    </div>
+                    <div class="recent-post">
+                        <img src="images/recent-4.jpg" alt="Tagebuch schreiben">
+                        <h4>Meine morgendliche Tagebuch-Routine</h4>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        // Einfache Funktionalität zum Hinzufügen neuer Artikel
+        function addArticle(title, category, imageUrl, author, date) {
+            const mainContent = document.querySelector('.main-content');
+            const newArticle = document.createElement('article');
+            newArticle.className = 'article';
+            newArticle.innerHTML = `
+                <div class="article-category">${category}</div>
+                <h2 class="article-title">${title}</h2>
+                <div class="article-meta">Veröffentlicht von ${author} am ${date}</div>
+                <img src="${imageUrl}" alt="${title}" class="article-image">
+                <a href="#" class="continue-reading">Weiterlesen →</a>
+            `;
+            mainContent.insertBefore(newArticle, mainContent.firstChild);
+        }
+
+        // Beispiel: Neuen Artikel hinzufügen
+        // addArticle('Neuer Artikel', 'DIY, BASTELN', 'https://example.com/image.jpg', 'Emily', '3. November 2023');
+
+        // Spam-Schutz für E-Mail-Adresse
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailLink = document.getElementById('email-link');
+            if (emailLink) {
+                // E-Mail-Adresse verschleiert
+                const email = 'josephineundlouise' + '@' + 'gmail.com';
+                emailLink.href = 'mailto:' + email + '?subject=Blog-Idee&body=Hallo Joséphine,%0D%0A%0D%0AHier ist meine Idee für einen neuen Blog-Beitrag:%0D%0A%0D%0A';
+            }
+        });
+    </script>
 </body>
 </html> 

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIKEL-TITEL - Nook Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 1000px;
+        }
+        
+        /* Desktop Optimierung */
+        @media (min-width: 769px) {
+            .container {
+                max-width: 1000px;
+                margin: 2rem auto;
+                padding: 0 2rem;
+            }
+            
+            .article {
+                padding: 2.5rem;
+            }
+            
+            .article-title {
+                font-size: 2.5rem;
+            }
+            
+            .article-image {
+                height: 450px;
+            }
+            
+            .article-content {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+            
+            .article-content h3 {
+                font-size: 1.4rem;
+                margin: 2.5rem 0 1.2rem 0;
+            }
+        }
+        
+        .article-title {
+            font-size: 2.2rem;
+        }
+        
+        .article-image {
+            height: 400px;
+            margin-bottom: 2rem;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .article-content h3 {
+            color: #20b2aa;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Optimierung für Artikel-Seiten */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.3rem;
+                margin: 0.5rem auto;
+            }
+            
+            .article {
+                padding: 0.8rem;
+                margin: 0;
+            }
+            
+            .article-title {
+                font-size: 1.2rem;
+                line-height: 1.2;
+                margin-bottom: 0.8rem;
+            }
+            
+            .article-image {
+                height: 180px;
+                margin-bottom: 1rem;
+            }
+            
+            .article-content {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+            
+            .article-content h3 {
+                font-size: 1rem;
+                margin: 1.2rem 0 0.6rem 0;
+            }
+            
+            .article-content p {
+                margin-bottom: 1rem;
+            }
+            
+            .article-content ul {
+                margin-bottom: 1rem;
+                padding-left: 1.2rem;
+            }
+            
+            .back-link {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html">ÜBER</a>
+            <a href="index.html">SELBERMACHEN</a>
+            <a href="index.html">HANDWERK</a>
+            <a href="index.html">FEIERTAGE</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <a href="index.html" class="back-link">← Zurück zur Hauptseite</a>
+        
+        <article class="article">
+            <div class="article-category">KATEGORIE</div>
+            <h1 class="article-title">ARTIKEL-TITEL</h1>
+            <div class="article-meta">Veröffentlicht von Joséphine am DATUM</div>
+            <img src="images/BILDNAME.jpg" alt="Bildbeschreibung" class="article-image">
+            
+            <div class="article-content">
+                <!-- Hier den Artikel-Inhalt einfügen -->
+                <h3>Überschrift</h3>
+                <p>Hier kommt der Text...</p>
+                
+                <h3>Weitere Überschrift</h3>
+                <ul>
+                    <li>Punkt 1</li>
+                    <li>Punkt 2</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
